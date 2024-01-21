@@ -4,6 +4,6 @@ const { getSummarySewing, getDetailSewingTransaction } = require('../controllers
 const router = express.Router();
 
 router.get('/summary/sewing', getSummarySewing);
-router.get('/detail/sewing/transaction/:date/:style', getDetailSewingTransaction);
+router.get('/detail/sewing/transaction', getDetailSewingTransaction);
 
 module.exports = router;

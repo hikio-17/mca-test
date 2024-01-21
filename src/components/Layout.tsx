@@ -3,7 +3,7 @@ import Sidebar from "./Sidebar";
 
 function Layout() {
    return (
-      <section className="d-flex">
+      <section className="d-flex position-relative">
          <Sidebar/>
          <HeaderNav />
       </section>

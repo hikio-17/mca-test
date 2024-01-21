@@ -1,9 +1,6 @@
-import { useState } from "react"
 import '../assets/styles/tablesummary.css'
 
-const TableSummary = ({ sewingSummary }) => {
-   const [viewDetail, setViewDetail] = useState(false);
-
+const TableSummary = ({ sewingSummary, onToggle }) => {
    return (
       <table cellSpacing={0}>
          <thead>
@@ -15,17 +12,17 @@ const TableSummary = ({ sewingSummary }) => {
          </thead>
 
          <tbody>
-            {sewingSummary.map((item) => (
-               <tr key={item.date}>
-                  <td>{item.Date.split('T')[0]}</td>
+            {sewingSummary.map((item, i) => (
+               <tr key={i}>
+                  <td>{item.Date}</td>
                   <td>{item.Style}</td>
                   <td>{item.TotalOutput}</td>
                   <td>{item.TotalSize}</td>
-                  <td className={`action ${viewDetail && 'close-detail'} `}>
+                  <td className={`action ${item.detailView === true ? 'close-detail' : ''} `}>
                      <button
-                        onClick={() => setViewDetail(!viewDetail)}
+                        onClick={() => onToggle(item, i)}
                      >
-                        {viewDetail ? 'Close Detail' : 'View Detail'}
+                        {item.detailView ? 'Close Detail' : 'View Detail'}
                      </button>
                   </td>
                </tr>

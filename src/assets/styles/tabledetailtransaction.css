@@ -54,6 +54,12 @@ td {
 tbody tr .size {
   width: 50px;
   text-align: center;
+  font-weight: bold;
+}
+
+tbody tr .red {
+  color: red;
+  font-weight: bold;
 }
 
 tbody tr .qty,

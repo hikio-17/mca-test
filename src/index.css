@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
 body {
@@ -112,6 +114,9 @@ hr {
    height: 145px;
    background-color: #fff;
    justify-content: space-between;
+}
+
+.header-nav a {
    color: rgb(109, 109, 109);
  }
 
@@ -119,6 +124,7 @@ hr {
    font-size: 34px;
    padding-left: 20px;
    margin-top: 30px;
+   color: rgb(109, 109, 109);
  }
 
  .header-nav__menu {

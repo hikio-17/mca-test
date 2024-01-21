@@ -1,4 +1,5 @@
 import { FaHome } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function HeaderNav() {
   return (
@@ -6,10 +7,14 @@ function HeaderNav() {
       <h3 className='header-nav__title'>Sewing</h3>
       <div className='header-nav__menu'>
         <div className="header-nav__menu-item">
-          <FaHome />
+          <Link to='/'>
+            <FaHome />
+          </Link>
         </div>
         <div className="header-nav__menu-item">
-          <p>Output</p>
+          <Link to='/sewing'>
+            <p>Output</p>
+          </Link>
         </div>
       </div>
     </section>

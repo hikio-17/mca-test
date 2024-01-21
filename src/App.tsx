@@ -1,4 +1,6 @@
+import { FaHome } from 'react-icons/fa';
 import Sidebar from './components/Sidebar';
+import HeaderNav from './components/HeaderNav';
 
 function App() {
   return (
@@ -6,9 +8,7 @@ function App() {
       <Sidebar />
 
       <section className='main-section'>
-        <div className="main-section__header-nav">
-          Header Nav
-        </div>
+        <HeaderNav />
 
         <main>
           <h1>Hello World</h1>

@@ -23,127 +23,144 @@ body {
 }
 
 .main-section {
-   width: 100%;
+  width: 100%;
 }
 
 /* STYLE SIDEBAR */
 .sidebar__profile {
-   display: flex;
-   align-items: center;
-   padding: 15px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
 }
 
 .sidebar__profile img {
-   width: 50px;
-   border-radius: 50%;
+  width: 50px;
+  border-radius: 50%;
 }
 
 .sidebar__profile-name {
-   padding-left: 15px;
-   padding-right: 15px;
-   color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #fff;
 }
 
 hr {
-   background-color: white;
-   margin-left: 10px;
-   margin-right: 10px;
+  background-color: white;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .input-group {
-   margin-top: 10px;
-   margin-bottom: 1rem;
-   display: flex;
-   width: 100%;
-   padding:10px 15px 0 15px;
-   border-radius: 10px;
- }
+  margin-top: 10px;
+  margin-bottom: 1rem;
+  display: flex;
+  width: 100%;
+  padding: 10px 15px 0 15px;
+  border-radius: 10px;
+}
 
- .input-group input {
-   background-color: rgba(37, 37, 37, 0.269);
-   border: 1px solid rgba(138, 138, 138, 0.861);
-   height: 35px;
-   width: 100%;
-   color: #fff;
-   padding: 10px;
-   border-radius: 10px 0px 0 10px;
- }
- 
- .input-group-append {
-   border-radius: 0 0 0.25rem 0.25rem;
- }
- 
- .input-group-append button {
-   border: 1px solid rgba(138, 138, 138, 0.861);
-   height: 100%;
-   width: 35px;
-   background-color: rgba(37, 37, 37, 0.269);
-   cursor: pointer;
-   border-radius: 0 10px 10px 0;
-   color: #fff;
- }
+.input-group input {
+  background-color: rgba(37, 37, 37, 0.269);
+  border: 1px solid rgba(138, 138, 138, 0.861);
+  height: 35px;
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px 0px 0 10px;
+}
 
- .sidebar__menu {
-   padding:0 30px 0 30px;
- }
+.input-group-append {
+  border-radius: 0 0 0.25rem 0.25rem;
+}
 
- .sidebar__menu-item {
-   display: flex;
-   align-items: center;
-   cursor: pointer;
- }
+.input-group-append button {
+  border: 1px solid rgba(138, 138, 138, 0.861);
+  height: 100%;
+  width: 35px;
+  background-color: rgba(37, 37, 37, 0.269);
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+  color: #fff;
+}
 
- .sidebar__menu-item-icon {
-   color: #fff;
-   font-size: 20px;
- }
+.sidebar__menu {
+  padding: 0 30px 0 30px;
+}
 
- .sidebar__menu-item-text {
-   color: #fff;
-   font-size: 18px;
-   margin-left: 10px;
- }
+.sidebar__menu-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
 
- /* STYLE HEADER NAV */
- .header-nav {
-   background-color: blue;
-   width: 100%;
-   height: 100%;
-   display: flex;
-   flex-direction: column;
-   height: 145px;
-   background-color: #fff;
-   justify-content: space-between;
+.sidebar__menu-item-icon {
+  color: #fff;
+  font-size: 20px;
+}
+
+.sidebar__menu-item-text {
+  color: #fff;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+/* STYLE HEADER NAV */
+.header-nav {
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 145px;
+  background-color: #fff;
+  justify-content: space-between;
 }
 
 .header-nav a {
-   color: rgb(109, 109, 109);
- }
+  color: rgb(109, 109, 109);
+}
 
- .header-nav__title {
-   font-size: 34px;
-   padding-left: 20px;
-   margin-top: 30px;
-   color: rgb(109, 109, 109);
- }
+.header-nav__title {
+  font-size: 34px;
+  padding-left: 20px;
+  margin-top: 30px;
+  color: rgb(109, 109, 109);
+}
 
- .header-nav__menu {
-   display: flex;
- }
+.header-nav__menu {
+  display: flex;
+}
 
- .header-nav__menu-item {
-   padding-left: 20px;
-   padding-right: 20px;
-   cursor: pointer;
-   font-size: 26px;
- }
+.header-nav__menu-item {
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  font-size: 26px;
+}
 
- .header-nav__menu-item svg {
-   padding: 0px;
- }
+.header-nav__menu-item svg {
+  padding: 0px;
+}
 
- .header-nav__menu-item:hover {
-   border-bottom: 2px solid green;
- }
+.header-nav__menu-item:hover {
+  border-bottom: 2px solid green;
+}
 
+/* STYLE SEWING PAGE */
 
+.sewing-page {
+  padding: 20px;
+}
+
+.sewing-page__summary {
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 850px;
+  min-height: 350px;
+  box-shadow: -2px 0px 13px 4px lightgrey;
+}
+
+.sewing-page__summary-title {
+  font-size: 22px;
+  padding: 15px;
+}

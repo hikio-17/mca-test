@@ -1,7 +1,7 @@
 import { useState } from "react"
 import '../assets/styles/tablesummary.css'
 
-const TableSummary = () => {
+const TableSummary = ({ sewingSummary }) => {
    const [viewDetail, setViewDetail] = useState(false);
 
    return (
@@ -15,46 +15,21 @@ const TableSummary = () => {
          </thead>
 
          <tbody>
-            <tr>
-               <td>2024-01-01</td>
-               <td>BOSSE FANCY OH HOOD S.9</td>
-               <td>5</td>
-               <td>190</td>
-               <td className="action">
-                  <button>View Detail</button>
-               </td>
-            </tr>
-            <tr>
-               <td>2024-01-01</td>
-               <td>BOSSE FANCY OH HOOD S.9</td>
-               <td>5</td>
-               <td>190</td>
-               <td className={`action ${viewDetail && 'close-detail'} `}>
-                  <button
-                     onClick={() => setViewDetail(!viewDetail)}
-                  >
-                     {viewDetail ? 'Close Detail' : 'View Detail'}
-                  </button>
-               </td>
-            </tr>
-            <tr>
-               <td>2024-01-01</td>
-               <td>BOSSE FANCY OH HOOD S.9</td>
-               <td>5</td>
-               <td>190</td>
-               <td className="action">
-                  <button>View Detail</button>
-               </td>
-            </tr>
-            <tr>
-               <td>2024-01-01</td>
-               <td>BOSSE FANCY OH HOOD S.9</td>
-               <td>5</td>
-               <td>190</td>
-               <td className="action">
-                  <button>View Detail</button>
-               </td>
-            </tr>
+            {sewingSummary.map((item) => (
+               <tr key={item.date}>
+                  <td>{item.Date.split('T')[0]}</td>
+                  <td>{item.Style}</td>
+                  <td>{item.TotalOutput}</td>
+                  <td>{item.TotalSize}</td>
+                  <td className={`action ${viewDetail && 'close-detail'} `}>
+                     <button
+                        onClick={() => setViewDetail(!viewDetail)}
+                     >
+                        {viewDetail ? 'Close Detail' : 'View Detail'}
+                     </button>
+                  </td>
+               </tr>
+            ))}
          </tbody>
       </table>
    )

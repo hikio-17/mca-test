@@ -1,8 +1,20 @@
-import { FaSearch } from "react-icons/fa"
+import { useEffect, useState } from "react";
 import TableDetailTransaction from "../components/TableDetailTransaction"
 import TableSummary from "../components/TableSummary"
+import api from "../utils/api";
 
 const SewingPage = () => {
+  const [sewingSummary, setSewingSummary] = useState([]);
+
+  useEffect(() => {
+    getAllSummarySewing()
+  }, []);
+
+  const getAllSummarySewing = async () => {
+    const summary = await api.getAllSummarySewing();
+    setSewingSummary(summary);
+    console.log(sewingSummary);
+  }
   return (
     <section className="sewing-page">
       <div className="sewing-page__search">
@@ -17,7 +29,7 @@ const SewingPage = () => {
       <div className="sewing-page__summary">
         <h4 className="sewing-page__summary-title">Summary</h4>
 
-        <TableSummary />
+        <TableSummary sewingSummary={sewingSummary} />
       </div>
 
       <div className="sewing-page__detail-transaction">

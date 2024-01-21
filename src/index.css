@@ -20,10 +20,12 @@ body {
   width: 20%;
   background-color: rgb(49, 47, 47);
   height: 100vh;
+  position: fixed;
 }
 
 .main-section {
   width: 100%;
+  margin-left: 20%;
 }
 
 /* STYLE SIDEBAR */
@@ -163,4 +165,31 @@ hr {
 .sewing-page__summary-title {
   font-size: 22px;
   padding: 15px;
+}
+
+.sewing-page__detail-transaction {
+  margin-top: 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  min-height: 350px;
+  width: 100%;
+  box-shadow: -2px 0px 13px 4px lightgrey;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* STYLE TABLE DETAIL TRANSACTION */
+.sewing-page__detail-transaction-style {
+   font-size: 22px;
+   padding: 15px 0 15px 0;
+   width: fit-content;
+   background-color: #bdd7bdb0;
+   font-weight: 900;
+}
+
+.sewing-page__detail-transaction-title {
+   font-size: 22px;
+   margin-top: 15px;
+   color: lightskyblue;
+   text-decoration: underline;
 }

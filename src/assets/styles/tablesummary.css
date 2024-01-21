@@ -1,71 +1,75 @@
-table {
-   border-collapse: collapse;
-   width: 100%;
-   border-radius: 5px;
- }
- 
- thead {
-    height: 50px;
- }
- 
- th,
- td {
-   border: 1px solid gray;
-   text-align: left;
-   padding: 8px;
- }
- 
- th {
-   background-color: #677f66b0;
- }
- 
- th[colspan]:after {
-   content: '';
-   display: block;
-   border-top: 2px solid #000;
-   margin-top: 8px;
- }
- 
- th:nth-child(1), td:nth-child(1) {
-    text-align: center;
-    width: 15%;
-  }
- 
-  th:nth-child(2), td:nth-child(2) {
-    width: 40%;
-  }
- 
-  th:nth-child(3), td:nth-child(3) {
-    text-align: center;
-    width: 15%;
-  }
- 
-  th:nth-child(4), td:nth-child(4) {
-    text-align: center;
-    width: 15%;
-  }
- 
-  th:nth-child(5), td:nth-child(5) {
-    text-align: center;
-    width: 15%;
-  }
- 
-  .action button {
-    background-color: lightskyblue;
-    border-radius: 50px;
-    padding: 5px 10px 5px 10px;
-    color: #000;
-    cursor: pointer;
-    border: 1 px solid gray;
-  }
- 
-  .close-detail button {
-    background-color: red;
-    color: #fff;
-  }
- 
-  tbody tr:hover {
-    background-color: lightcoral;
-    font-weight: bold;
-  }
- 
+.sewing-page__summary table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.sewing-page__summary thead {
+  height: 50px;
+}
+
+.sewing-page__summary th,
+td {
+  border: 1px solid gray;
+  text-align: left;
+  padding: 8px;
+}
+
+.sewing-page__summary th {
+  background-color: #677f66b0;
+}
+
+.sewing-page__summary th[colspan]:after {
+  content: '';
+  display: block;
+  border-top: 2px solid #000;
+  margin-top: 8px;
+}
+
+.sewing-page__summary th:nth-child(1),
+td:nth-child(1) {
+  text-align: center;
+  width: 15%;
+}
+
+.sewing-page__summary th:nth-child(2),
+td:nth-child(2) {
+  width: 40%;
+}
+
+.sewing-page__summary th:nth-child(3),
+td:nth-child(3) {
+  text-align: center;
+  width: 15%;
+}
+
+.sewing-page__summary th:nth-child(4),
+td:nth-child(4) {
+  text-align: center;
+  width: 15%;
+}
+
+.sewing-page__summary th:nth-child(5),
+td:nth-child(5) {
+  text-align: center;
+  width: 15%;
+}
+
+.sewing-page__summary .action button {
+  background-color: lightskyblue;
+  border-radius: 50px;
+  padding: 5px 10px 5px 10px;
+  color: #000;
+  cursor: pointer;
+  border: 1 px solid gray;
+}
+
+.sewing-page__summary .close-detail button {
+  background-color: red;
+  color: #fff;
+}
+
+.sewing-page__summary tbody tr:hover {
+  background-color: lightcoral;
+  font-weight: bold;
+}

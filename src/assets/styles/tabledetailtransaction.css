@@ -1,0 +1,71 @@
+.sewing-page__detail-transaction table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.sewing-page__detail-transaction thead {
+  height: 50px;
+}
+
+.sewing-page__detail-transaction th,
+td {
+  border: 1px solid gray;
+  text-align: left;
+  padding: 8px;
+}
+
+.sewing-page__detail-transaction th {
+  background-color: #bdd7bdb0;
+}
+
+.sewing-page__detail-transaction th[colspan]:after {
+  content: '';
+  display: block;
+  margin-top: 8px;
+}
+
+.sewing-page__detail-transaction thead tr:nth-child(1) th:nth-child(1) {
+  text-align: left;
+  width: 20%;
+  padding-left: 15px;
+}
+
+.sewing-page__detail-transaction thead tr:nth-child(1) th:nth-child(2) {
+  text-align: center;
+  width: 55%;
+}
+
+.sewing-page__detail-transaction thead tr:nth-child(1) th:nth-child(3) {
+  text-align: center;
+  width: 10%;
+}
+
+.sewing-page__detail-transaction thead tr:nth-child(1) th:nth-child(4) {
+  text-align: left;
+  width: 15%;
+}
+
+.sewing-page__detail-transaction thead tr:nth-child(2) th {
+  text-align: center;
+}
+
+tbody tr .size {
+  width: 50px;
+  text-align: center;
+}
+
+tbody tr .qty,
+.destination {
+  text-align: center;
+}
+
+tbody tr .operator {
+  text-align: left;
+  padding-left: 15px;
+}
+
+.sewing-page__detail-transaction thead tr:nth-child(2) {
+  width: 100%;
+}

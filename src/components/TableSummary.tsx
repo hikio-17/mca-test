@@ -1,6 +1,8 @@
+import React from 'react'
 import '../assets/styles/tablesummary.css'
+import { SewingSummary, TableSummaryProps } from '../types'
 
-const TableSummary = ({ sewingSummary, onToggle }) => {
+const TableSummary: React.FC<TableSummaryProps> = ({ sewingSummary, onToggle }) => {
    return (
       <table cellSpacing={0}>
          <thead>
@@ -12,7 +14,7 @@ const TableSummary = ({ sewingSummary, onToggle }) => {
          </thead>
 
          <tbody>
-            {sewingSummary.map((item, i) => (
+            {sewingSummary.map((item: SewingSummary, i: number) => (
                <tr key={i}>
                   <td>{item.Date}</td>
                   <td>{item.Style}</td>

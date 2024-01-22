@@ -4,9 +4,12 @@ import TableSummary from "../components/TableSummary"
 import api from "../utils/api";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllSewingSummary, getDetailSewingTransaction, toggleSewingSummary } from "../stores/sewings/sewingSlice";
+import { SewingSummary, States } from "../types";
+import useInput from "../hooks/useInput";
 
 const SewingPage = () => {
-  const { sewingSummary, sewingDetailTransaction } = useSelector((states) => states.sewing);
+  const { sewingSummary, sewingDetailTransaction } = useSelector((states: States) => states.sewing);
+  const [keyword, changeKeyword] = useInput('');
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -21,11 +24,13 @@ const SewingPage = () => {
     fetchSewingSummary();
   }, [dispatch]);
 
-  const handleToggleViewSummary = async (item: object, id: number) => {
+  const handleToggleViewSummary = async (item: SewingSummary, id: number) => {
     dispatch(toggleSewingSummary(id))
     const data = await api.getDetailSewingTransaction(item.Date, item.Style)
-    dispatch(getDetailSewingTransaction(data))
+    dispatch(getDetailSewingTransaction({ ...data, Date: item.Date }))
   }
+
+  const filterSewingSummary = sewingSummary.filter((item: SewingSummary) => item.Style.toLowerCase().includes(keyword.toLowerCase()));
 
   return (
     <section className="sewing-page">
@@ -33,7 +38,7 @@ const SewingPage = () => {
         <p>
           Search
           <span className="sewing-page__search-input">
-            <input type="text" placeholder="🔍" />
+            <input type="text" placeholder="🔍" value={keyword} onChange={changeKeyword} />
           </span>
         </p>
       </div>
@@ -41,12 +46,18 @@ const SewingPage = () => {
       <div className="sewing-page__summary">
         <h4 className="sewing-page__summary-title">Summary</h4>
 
-        <TableSummary sewingSummary={sewingSummary} onToggle={handleToggleViewSummary} />
+        {filterSewingSummary.length > 0 ? (
+          <TableSummary sewingSummary={filterSewingSummary} onToggle={handleToggleViewSummary} />
+        ) : (
+          <center>
+            <h3>Data Belum Tersedia ..!</h3>
+          </center>
+        )}
       </div>
 
       {sewingDetailTransaction && (
         <div className="sewing-page__detail-transaction">
-          <h4 className="sewing-page__detail-transaction-style">SUMMARY</h4>
+          <h4 className="sewing-page__detail-transaction-style">{sewingDetailTransaction.StyleCode} #{sewingDetailTransaction.Date}</h4>
           <h4 className="sewing-page__detail-transaction-title">Detail Transaction</h4>
           <TableDetailTransaction detailTransaction={sewingDetailTransaction} />
         </div>

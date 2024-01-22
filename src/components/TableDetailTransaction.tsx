@@ -1,6 +1,8 @@
+import React from 'react';
 import '../assets/styles/tabledetailtransaction.css'
+import { TableDetailTransactionProps } from './../types/index';
 
-const TableDetailTransaction = ({ detailTransaction }) => {
+const TableDetailTransaction: React.FC<TableDetailTransactionProps> = ({ detailTransaction }) => {
    return (
       <>
          {detailTransaction.StyleCode === 'BOSSE FANCY OH HOOD S.9' ? (<table>
@@ -80,9 +82,6 @@ const TableDetailTransaction = ({ detailTransaction }) => {
                ))}
             </tbody>
          </table>)}
-
-
-
       </>
    )
 }

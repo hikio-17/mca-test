@@ -4,11 +4,11 @@ const getAllSummarySewing = async () => {
    const response = await fetch(`${BASE_URL}/summary/sewing`);
    const responseJson = await response.json();
 
-   const { data: { status, sewingSummary } } = responseJson;
+   const { data: { sewingSummary } } = responseJson;
    return sewingSummary;
 }
 
-const getDetailSewingTransaction = async (date, style) => {
+const getDetailSewingTransaction = async (date: string, style: string) => {
    const response = await fetch(`${BASE_URL}/detail/sewing/transaction?TrnDate=${date}&StyleCode=${style}`);
    const responseJson = await response.json();
 

@@ -1,22 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { SewingSummary } from "../../types";
 
 const sewingSlice = createSlice({
    name: 'sewingSummary',
    initialState: {
-      sewingSummary: [],
+      sewingSummary: [] as SewingSummary[],
       sewingDetailTransaction: null,
    },
    reducers: {
       getAllSewingSummary: (state, action) => {
-         state.sewingSummary = action.payload.map((item) => ({
+         state.sewingSummary = action.payload.map((item: SewingSummary) => ({
             ...item,
             detailView: false,
          }));
       },
       getDetailSewingTransaction: (state, action) => {
-         const activefDetailView = state.sewingSummary.findIndex((item) => item.detailView === true);
-
-         console.log(activefDetailView, 'dari toggle')
+         const activefDetailView = state.sewingSummary.findIndex((item: SewingSummary) => item.detailView === true);
 
          if (activefDetailView === -1) {
             state.sewingDetailTransaction = null;
@@ -27,7 +26,7 @@ const sewingSlice = createSlice({
          
       },
       toggleSewingSummary: (state, action) => {
-         state.sewingSummary = state.sewingSummary.map((item, i) => {
+         state.sewingSummary = state.sewingSummary.map((item: SewingSummary, i: number) => {
             if (i === action.payload) {
 
                return {
